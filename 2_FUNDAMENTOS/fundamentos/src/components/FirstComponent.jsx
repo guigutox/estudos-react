@@ -1,5 +1,7 @@
 //exemplo de comentário
 
+import MyComponent from "./MyComponent";
+
 const FirstComponent = () => {
     /*
         Comentar multiplas linhas
@@ -12,6 +14,7 @@ const FirstComponent = () => {
             {/*Exemplo de comentário dentro do jsx*/}
             <h1>Meu primeiro componente</h1>
             <h2>Meu primeiro componente l2</h2>
+            <MyComponent/>
         </div>
     )
 }

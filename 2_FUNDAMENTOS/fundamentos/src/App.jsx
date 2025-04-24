@@ -5,6 +5,7 @@ import TemplateExpressions from './components/TemplateExpressions'
 
 //styles /CSS
 import './App.css'
+import Events from './components/Events'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
       <h1>Fundamentos do React</h1>
       <FirstComponent />
       <TemplateExpressions/>
+      <Events/>
     </div>
   )
 }
