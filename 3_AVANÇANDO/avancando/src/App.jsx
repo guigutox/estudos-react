@@ -1,14 +1,25 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import CharizardY from './assets/Charizard-mega-y.png'
+import ManageData from './components/ManageData'
 
 function App() {
   const [count, setCount] = useState(0)
-
   return (
     <>
+    <div>
       <h1>SEÇÃO 3</h1>
+      {/* Acessar imagem em public */}
+      <div>
+        <img src="/Charizard-mega-x.png" alt="Charizard x mega" />
+      </div>
+      <div>
+        {/*Imagem em asset*/}
+        <img src={CharizardY} alt="Charizard Y mega" />
+      </div>
+        <ManageData/>
+      </div>
     </>
   )
 }
