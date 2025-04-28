@@ -9,6 +9,9 @@ import ShowUserName from './components/ShowUserName'
 import CarDetails from './components/CarDetails'
 import Fragment from './components/Fragment'
 import Container from './components/Container'
+import ExecuteFunction from './components/ExecuteFunction'
+import Message from './components/Message'
+import ChangeMessageState from './components/ChangeMessageState'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +23,18 @@ function App() {
     {id: 2, brand: "Ford", color: "Preto", newCar: true, km: 0},
     {id: 3, brand: "Honda", color: "Branco", newCar: false, km: 110},
   ]
+
+  function showMessage(){ 
+    console.log("Evento do componente pai!")
+
+  }
+
+  const [message, setMessage] = useState("")
+
+  const handleMessage = (msg) => {
+    setMessage(msg)
+  };
+
   return (
     <>
     <div>
@@ -44,7 +59,9 @@ function App() {
         <CarDetails brand="Audi" color="Vermelho" km={600} newCar={true}/>
         {/* loop com array de objetos */}
         {cars.map((car) => (
-          <CarDetails brand={car.brand} color={car.color} km = {car.km} newCar = {car.newCar} />
+          <CarDetails 
+          key={car.id}
+          brand={car.brand} color={car.color} km = {car.km} newCar = {car.newCar} />
         ))}
         {/*Fragment*/}
         <Fragment propFragment="Teste" />
@@ -55,6 +72,11 @@ function App() {
         <Container MyValue={"testing 2 "}>
           <h3>Esse é o conteúdo do container</h3>
         </Container>
+        {/* Executar função*/}
+        <ExecuteFunction myFunction={showMessage} />
+        {/* State lift */}
+        <Message msg={message}/>
+        <ChangeMessageState handleMessage={handleMessage}/>
       </div>
     </>
   )

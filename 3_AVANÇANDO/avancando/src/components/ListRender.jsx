@@ -25,7 +25,7 @@ const ListRender = () => {
         </ul>
         <ul>
             {users.map((user)=>(
-                <li key={user.id}>{user.name} - {user.age}</li>
+                <li key={user.id}> {user.name} - {user.age}</li>
             ))}
         </ul>
         <button onClick={deleteRandom}> Delete random user</button>
