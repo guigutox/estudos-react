@@ -3,3 +3,12 @@ body{
   padding: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.car-container{
+  display: flex;
+  justify-content: center;
+}
+
+.car-container div{
+  margin-top: 50px;
+}

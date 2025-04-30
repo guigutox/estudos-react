@@ -14,13 +14,14 @@ function App() {
   return (
     <>
     <h1>Esse é o 4º Desafio</h1>
+    <div className='car-container'>
     {cars.map((car) =>(
       <CarDetails key={car.id}
         brand={car.brand} name={car.name} year={car.year}
       />
-
+    
     ))}
-      
+      </div>
     </>
   )
 }

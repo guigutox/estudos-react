@@ -3,7 +3,7 @@ import styles from './CarDetails.module.css'
 const CarDetails = ({brand, name, year}) => {
 
 return (
-    <div>
+    <div className={styles.card}>
         <p>{brand}, {name}, {year}</p>
     </div>
   )
